@@ -1,0 +1,23 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["SuperStore_Sales_Dataset"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table SuperStore_Sales_Dataset
+ref table DateTableTemplate_a00c0b47-8c94-4763-b575-085bd594489e
+ref table LocalDateTable_67bd4fe7-6912-4621-95fc-1176be91c1ca
+ref table LocalDateTable_b036be3c-df85-432f-849b-55b9e5a3912a
+ref table SalesForecast
+ref table LocalDateTable_9a035029-d144-4858-a413-add747b08744
+
+ref cultureInfo en-IN
+

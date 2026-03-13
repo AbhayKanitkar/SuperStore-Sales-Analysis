@@ -1,0 +1,216 @@
+table SuperStore_Sales_Dataset
+	lineageTag: 2f945256-336f-4c2c-8c97-6c8c64268aba
+
+	column 'Row ID+O6G3A1:R6'
+		dataType: int64
+		formatString: 0
+		lineageTag: cfec7242-ec99-4856-833a-8dbda1185958
+		summarizeBy: sum
+		sourceColumn: Row ID+O6G3A1:R6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order ID'
+		dataType: string
+		lineageTag: dda24d7e-9e4f-48e2-9b7a-27d8988ae8df
+		summarizeBy: none
+		sourceColumn: Order ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aaffda9b-7596-4456-9640-525fc9957bb7
+		summarizeBy: none
+		sourceColumn: Order Date
+
+		variation Variation
+			isDefault
+			relationship: e90addb9-48c8-46c9-98c0-8ee84f5d8e1e
+			defaultHierarchy: LocalDateTable_67bd4fe7-6912-4621-95fc-1176be91c1ca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Ship Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 19b0e791-79cb-4bdd-ad01-c969279e1e60
+		summarizeBy: none
+		sourceColumn: Ship Date
+
+		variation Variation
+			isDefault
+			relationship: 2a46cd88-d095-4aac-a5ac-364bd8cdba0e
+			defaultHierarchy: LocalDateTable_b036be3c-df85-432f-849b-55b9e5a3912a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Ship Mode'
+		dataType: string
+		lineageTag: 223a9a61-cf1a-4701-806a-38ea15862f9b
+		summarizeBy: none
+		sourceColumn: Ship Mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer ID'
+		dataType: string
+		lineageTag: 0eabdb5b-e84e-4c0e-bffb-4e2556d380d6
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: ee4c5227-e5c9-4534-813e-8980df142aac
+		summarizeBy: none
+		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 074fdfd3-e799-47eb-838d-66ec70962a1b
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 18eb0fdc-def6-4987-8214-461059c45f3e
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: f3529773-c9b4-4ab3-80d3-e8864c104d16
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 38ace7e0-8de4-4773-a823-4b4d9f3731da
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 8df20cbb-5639-4072-8b71-51e8a2c2cb7e
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product ID'
+		dataType: string
+		lineageTag: 26726371-506b-4cd0-889e-46f1e5c5b351
+		summarizeBy: none
+		sourceColumn: Product ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 27f8cdd1-c156-4dea-9934-ecd9ac3e2f68
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sub-Category
+		dataType: string
+		lineageTag: 380f4b7c-ea6b-45be-a4a6-8936c678db9f
+		summarizeBy: none
+		sourceColumn: Sub-Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: 321ff680-182a-4673-be7b-fcb212bf2de9
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales
+		dataType: double
+		lineageTag: ead1cfeb-2d90-4d84-aaf9-f777c315af2c
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1797b2b8-fde2-4937-8823-d90db4221d56
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profit
+		dataType: double
+		lineageTag: 1ebb91ca-4877-423a-8c6d-389c01b0e5f0
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Returns
+		dataType: string
+		lineageTag: 382d2525-4175-4b82-a567-9d8e39d7fde3
+		summarizeBy: none
+		sourceColumn: Returns
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Payment Mode'
+		dataType: string
+		lineageTag: 175ee9b9-9267-4df2-b435-f536277880bf
+		summarizeBy: none
+		sourceColumn: Payment Mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avg_Delivery_DAYS = DATEDIFF(SuperStore_Sales_Dataset[Order Date],SuperStore_Sales_Dataset[Ship Date],DAY)
+		formatString: 0
+		lineageTag: 6a1880c4-5961-4543-b944-13bac58ff452
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SuperStore_Sales_Dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\bsk11\Downloads\SuperStore_Sales_Dataset.csv"),[Delimiter=",", Columns=23, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Row ID+O6G3A1:R6", Int64.Type}, {"Order ID", type text}, {"Order Date", type date}, {"Ship Date", type date}, {"Ship Mode", type text}, {"Customer ID", type text}, {"Customer Name", type text}, {"Segment", type text}, {"Country", type text}, {"City", type text}, {"State", type text}, {"Region", type text}, {"Product ID", type text}, {"Category", type text}, {"Sub-Category", type text}, {"Product Name", type text}, {"Sales", type number}, {"Quantity", Int64.Type}, {"Profit", type number}, {"Returns", type text}, {"Payment Mode", type text}, {"ind1", type text}, {"ind2", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","#N/A","0",Replacer.ReplaceText,{"Returns"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Replaced Value",{"ind1", "ind2"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
